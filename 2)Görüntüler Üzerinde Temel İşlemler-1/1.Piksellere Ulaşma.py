@@ -1,0 +1,13 @@
+import cv2
+import numpy as np
+
+img = cv2.imread("helikopter.jpg")
+
+px = img[100,100] # yatay ve düşey boyutları girilen noktanın renk değerini px değişkenine atar...
+print(px) # atanan renk değerlerini yazdırır...
+
+blue = img[411,100,0] # burdaki 0 değeri blue değişkenine sadece mavinin renk kodunu atar,1 olursa yeşilin değerini ve 2 olursa da kırmızının değerini atar...
+print(blue)
+
+img[100,100] = [255,255,255] # 100'e 100 noktasındaki rengin değerlerini değiştirir...
+print(img[100,100])
